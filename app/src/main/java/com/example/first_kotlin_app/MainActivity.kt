@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.TextView
+
 class MainActivity : AppCompatActivity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
+
+    lateinit var txtHelloWord : TextView
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-            var txtHelloWord = findViewById<TextView>(R.id.txtHelloWord)
+            txtHelloWord = findViewById(R.id.txtHelloWord)
             //Substituir "teste" pelo shared preferences com o nome do usuário, NÃO ESQUEÇA
             var teste : String? = "Jorge"
             var nome : String = teste ?: "Bem vindo"
@@ -21,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             }
             splashAction()
         }
+
     private fun splashAction() {
         Handler().postDelayed({
             val intent = Intent(this, MenuActivity::class.java)
