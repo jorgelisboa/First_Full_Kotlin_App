@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">First_kotlin_app</string>
+    <string name="title_home">Home</string>
+    <string name="title_person">Person</string>
+    <string name="title_search">Search</string>
+    <string name="value">HOME_ACTVITY</string>
 </resources>

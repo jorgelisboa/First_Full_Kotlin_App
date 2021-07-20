@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
             txtHelloWord = findViewById(R.id.txtHelloWord)
             //Substituir "teste" pelo shared preferences com o nome do usuário, NÃO ESQUEÇA
-            var teste : String? = "Jorge"
+            var teste : String? = null
             var nome : String = teste ?: "Bem vindo"
             if(nome != null) {
                 txtHelloWord.text = "Olá, $nome"
