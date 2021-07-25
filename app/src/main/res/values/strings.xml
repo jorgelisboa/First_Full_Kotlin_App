@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">First_kotlin_app</string>
-    <string name="title_home">Home</string>
-    <string name="title_person">Person</string>
-    <string name="title_search">Search</string>
-    <string name="value">HOME_ACTVITY</string>
+    <string name="item1">Dice</string>
+    <string name="item2">Historic</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Tela de dados</string>
+    <string name="hello_fragment">Tela do histórico de dados</string>
+
 </resources>
