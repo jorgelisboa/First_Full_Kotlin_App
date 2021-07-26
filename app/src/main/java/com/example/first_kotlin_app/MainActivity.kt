@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        supportActionBar?.hide()
             txtHelloWord = findViewById(R.id.txtHelloWord)
             //Substituir "teste" pelo shared preferences com o nome do usuário, NÃO ESQUEÇA
             var teste : String? = null
