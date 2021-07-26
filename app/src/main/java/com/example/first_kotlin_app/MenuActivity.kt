@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.first_kotlin_app.fragments.DiceFragment
 import com.example.first_kotlin_app.fragments.DiceHistoricFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import java.sql.Array
 
 class MenuActivity : AppCompatActivity(){
     //Variables
@@ -36,6 +37,4 @@ class MenuActivity : AppCompatActivity(){
             transaction.commit()
         }
     }
-
-
 }

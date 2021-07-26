@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,14 +16,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
             txtHelloWord = findViewById(R.id.txtHelloWord)
-            //Substituir "teste" pelo shared preferences com o nome do usuário, NÃO ESQUEÇA
-            var teste : String? = null
-            var nome : String = teste ?: "Bem vindo"
-            if(nome != null) {
-                txtHelloWord.text = "Olá, $nome"
-            } else {
-                txtHelloWord.text = nome
-            }
+            //Gerar frase aleatória
+            getRadomPrhase()
             splashAction()
         }
 
@@ -30,6 +26,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000) // 3000 is the delayed time in milliseconds.
+        }, 4000) // 3000 is the delayed time in milliseconds.
+    }
+
+    private fun getRadomPrhase(){
+        val frases = arrayOf("Lembre-se, dragões amam ouro.",
+            "Itens mágicos não são necessariamente indestrutíveis.",
+            "Crie suas magias, pode ser mais legal do que as prontas.",
+            "Faça um RPG em que você é o vilão.")
+
+            txtHelloWord.text = frases[Random.nextInt(3)]
     }
 }
