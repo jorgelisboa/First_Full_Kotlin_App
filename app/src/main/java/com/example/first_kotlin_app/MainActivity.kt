@@ -19,8 +19,7 @@ class MainActivity : AppCompatActivity() {
             //Gerar frase aleatória
             getRadomPrhase()
             splashAction()
-        }
-
+    }
     private fun splashAction() {
         Handler().postDelayed({
             val intent = Intent(this, MenuActivity::class.java)
@@ -34,7 +33,6 @@ class MainActivity : AppCompatActivity() {
             "Itens mágicos não são necessariamente indestrutíveis.",
             "Crie suas magias, pode ser mais legal do que as prontas.",
             "Faça um RPG em que você é o vilão.")
-
             txtHelloWord.text = frases[Random.nextInt(3)]
     }
 }
