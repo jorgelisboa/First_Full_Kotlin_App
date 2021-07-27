@@ -43,7 +43,7 @@ class DiceFragment : Fragment() {
 
     private fun sorteioDado(num : Int){
         val alertDialog = AlertDialog.Builder(activity) // This needs the activity's context
-        var num = Random.nextInt(num) + 1
+        val num = Random.nextInt(num) + 1
         alertDialog.setMessage(num.toString())
         alertDialog.show()
     }

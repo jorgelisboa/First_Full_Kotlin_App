@@ -7,37 +7,23 @@
     android:background="@color/my_background"
     tools:context=".fragments.DiceFragment">
 
-    <Button
+    <ImageButton
         android:id="@+id/dice_4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/dice_6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_4" />
-
-    <Button
-        android:id="@+id/dice_8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:background="@color/material_on_background_disabled"
+        android:src="@drawable/d4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_6" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dice_10"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,8 +35,28 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dice_10"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/dice_8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_6" />
+
+    <ImageButton
+        android:id="@+id/dice_6"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@color/material_on_background_disabled"
+        android:src="@drawable/d6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
