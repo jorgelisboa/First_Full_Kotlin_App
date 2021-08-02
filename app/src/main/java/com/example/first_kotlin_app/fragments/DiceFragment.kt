@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.first_kotlin_app.MenuActivity
 import com.example.first_kotlin_app.R
+import kotlinx.android.synthetic.main.dice_dialog.*
+import kotlinx.android.synthetic.main.dice_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_dice.*
 import kotlin.random.Random
 
@@ -22,7 +24,6 @@ class DiceFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
     //Eventos dos dados
         dice_4.setOnClickListener {
             sorteioDado(4).toString()
@@ -39,12 +40,18 @@ class DiceFragment : Fragment() {
         dice_12.setOnClickListener {
             sorteioDado(12).toString()
         }
+
+
     }
 
     private fun sorteioDado(num : Int){
         val alertDialog = AlertDialog.Builder(activity) // This needs the activity's context
+        val inflater = layoutInflater
+        val view = inflater.inflate(R.layout.dice_dialog, null)
         val num = Random.nextInt(num) + 1
-        alertDialog.setMessage(num.toString())
-        alertDialog.show()
+        view.dice_result.text = num.toString()
+        alertDialog.setView(view)
+        val dialog = alertDialog.create()
+        dialog.show()
     }
 }
