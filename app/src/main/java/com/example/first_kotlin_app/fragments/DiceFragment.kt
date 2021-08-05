@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.first_kotlin_app.MenuActivity
 import com.example.first_kotlin_app.R
-import kotlinx.android.synthetic.main.dice_dialog.*
 import kotlinx.android.synthetic.main.dice_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_dice.*
+import java.util.concurrent.ThreadLocalRandom
 import kotlin.random.Random
 
 class DiceFragment : Fragment() {
@@ -26,29 +25,30 @@ class DiceFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     //Eventos dos dados
         dice_4.setOnClickListener {
-            sorteioDado(4).toString()
+            showdado(4).toString()
         }
         dice_6.setOnClickListener {
-            sorteioDado(6).toString()
+            showdado(6).toString()
         }
         dice_8.setOnClickListener {
-            sorteioDado(8).toString()
+            showdado(8).toString()
         }
         dice_10.setOnClickListener {
-            sorteioDado(10).toString()
+            showdado(10).toString()
         }
         dice_12.setOnClickListener {
-            sorteioDado(12).toString()
+            showdado(12).toString()
         }
-
-
+        dice_20.setOnClickListener {
+            showdado(20).toString()
+        }
     }
 
-    private fun sorteioDado(num : Int){
+    private fun showdado(num : Int){
         val alertDialog = AlertDialog.Builder(activity) // This needs the activity's context
         val inflater = layoutInflater
         val view = inflater.inflate(R.layout.dice_dialog, null)
-        val num = Random.nextInt(num) + 1
+        val num = ThreadLocalRandom.current().nextInt(num) + 1 //Better than 'randon', more different numbers
         view.dice_result.text = num.toString()
         alertDialog.setView(view)
         val dialog = alertDialog.create()

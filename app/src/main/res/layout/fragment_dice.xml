@@ -7,56 +7,116 @@
     android:background="@color/my_background"
     tools:context=".fragments.DiceFragment">
 
-    <ImageButton
-        android:id="@+id/dice_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@color/material_on_background_disabled"
-        android:src="@drawable/d4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/dice_6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/material_on_background_disabled"
-        android:src="@drawable/d6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_4" />
-
-    <ImageButton
-        android:id="@+id/dice_8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/material_on_background_disabled"
-        android:src="@drawable/d8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_6" />
-
-    <Button
-        android:id="@+id/dice_10"
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_layout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_8" />
-
-    <Button
-        android:id="@+id/dice_12"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        app:rowCount="3"
+        app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_10"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/dice_4"
+            android:layout_margin="5sp"
+            android:background="@color/material_on_background_disabled"
+            android:gravity="fill"
+            android:text="1d4"
+            android:textAlignment="center"
+            android:textColor="@color/my_white"
+            android:textSize="20sp"
+            app:icon="@drawable/d4"
+            app:iconGravity="textTop"
+            app:iconSize="64dp"
+            app:iconTint="@color/my_white"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/dice_6"
+            android:layout_margin="5sp"
+            android:background="@color/material_on_background_disabled"
+            android:gravity="fill"
+            android:text="1d6"
+            android:textAlignment="center"
+            android:textColor="@color/my_white"
+            android:textSize="20sp"
+            app:icon="@drawable/d6"
+            app:iconGravity="textTop"
+            app:iconSize="64dp"
+            app:iconTint="@color/my_white"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/dice_8"
+            android:layout_margin="5sp"
+            android:background="@color/material_on_background_disabled"
+            android:gravity="fill"
+            android:text="1d8"
+            android:textAlignment="center"
+            android:textColor="@color/my_white"
+            android:textSize="20sp"
+            app:icon="@drawable/d8"
+            app:iconGravity="textTop"
+            app:iconSize="64dp"
+            app:iconTint="@color/my_white"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/dice_10"
+            android:layout_margin="5sp"
+            android:background="@color/material_on_background_disabled"
+            android:gravity="fill"
+            android:text="1d10"
+            android:textAlignment="center"
+            android:textColor="@color/my_white"
+            android:textSize="20sp"
+            app:icon="@drawable/d10"
+            app:iconGravity="textTop"
+            app:iconSize="64dp"
+            app:iconTint="@color/my_white"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/dice_12"
+            android:layout_margin="5sp"
+            android:background="@color/material_on_background_disabled"
+            android:gravity="fill"
+            android:text="1d12"
+            android:textAlignment="center"
+            android:textColor="@color/my_white"
+            android:textSize="20sp"
+            app:icon="@drawable/d12"
+            app:iconGravity="textTop"
+            app:iconSize="64dp"
+            app:iconTint="@color/my_white"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/dice_20"
+            android:layout_margin="5sp"
+            android:background="@color/material_on_background_disabled"
+            android:gravity="fill"
+            android:text="1d20"
+            android:textAlignment="center"
+            android:textColor="@color/my_white"
+            android:textSize="20sp"
+            app:icon="@drawable/d20"
+            app:iconGravity="textTop"
+            app:iconSize="64dp"
+            app:iconTint="@color/my_white"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="RtlCompat" />
+    </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
