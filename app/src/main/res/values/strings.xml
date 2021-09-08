@@ -6,4 +6,11 @@
     <string name="hello_blank_fragment">Tela de dados</string>
     <string name="hello_fragment">Tela do histórico de dados</string>
     <string name="boas_vindas">Bem vindo</string>
+    <string name="d4">1d4</string>
+    <string name="d6">1d6</string>
+    <string name="d8">1d8</string>
+    <string name="d10">1d10</string>
+    <string name="d12">1d12</string>
+    <string name="d20">1d20</string>
+    <string name="d100">1d100</string>
 </resources>

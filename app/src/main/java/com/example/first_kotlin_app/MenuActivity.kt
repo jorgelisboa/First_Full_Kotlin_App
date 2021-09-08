@@ -5,12 +5,10 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.first_kotlin_app.fragments.DiceFragment
 import com.example.first_kotlin_app.fragments.DiceHistoricFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import java.sql.Array
+import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : AppCompatActivity(){
     //Variables
-    lateinit var bottomNavigationView : BottomNavigationView
     private val diceFragment = DiceFragment()
     private val diceHistoricFragment = DiceHistoricFragment()
 
@@ -18,7 +16,6 @@ class MenuActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         supportActionBar?.hide()
-        bottomNavigationView = findViewById(R.id.bottomNavigationView)
         replaceFragment(diceFragment)
 
         bottomNavigationView.setOnItemSelectedListener {
@@ -30,11 +27,10 @@ class MenuActivity : AppCompatActivity(){
         }
     }
 
+    //Start in dices fragment
     private fun replaceFragment(fragment: Fragment){
-        if(fragment != null){
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container, fragment)
-            transaction.commit()
-        }
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container, fragment)
+        transaction.commit()
     }
 }

@@ -10,7 +10,6 @@ import com.example.first_kotlin_app.R
 import kotlinx.android.synthetic.main.dice_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_dice.*
 import java.util.concurrent.ThreadLocalRandom
-import kotlin.random.Random
 
 class DiceFragment : Fragment() {
     override fun onCreateView(
@@ -25,26 +24,29 @@ class DiceFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     //Eventos dos dados
         dice_4.setOnClickListener {
-            showdado(4).toString()
+            showDado(4).toString()
         }
         dice_6.setOnClickListener {
-            showdado(6).toString()
+            showDado(6).toString()
         }
         dice_8.setOnClickListener {
-            showdado(8).toString()
+            showDado(8).toString()
         }
         dice_10.setOnClickListener {
-            showdado(10).toString()
+            showDado(10).toString()
         }
         dice_12.setOnClickListener {
-            showdado(12).toString()
+            showDado(12).toString()
         }
         dice_20.setOnClickListener {
-            showdado(20).toString()
+            showDado(20).toString()
+        }
+        dice_100.setOnClickListener {
+            showDado(100).toString()
         }
     }
 
-    private fun showdado(num : Int){
+    private fun showDado(num : Int){
         val alertDialog = AlertDialog.Builder(activity) // This needs the activity's context
         val inflater = layoutInflater
         val view = inflater.inflate(R.layout.dice_dialog, null)
